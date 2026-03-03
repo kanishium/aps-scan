@@ -1,8 +1,13 @@
 import React from 'react'
+import DashboardLayout from '../Components/Dashboard/Layout/DashboardLayout'
+import StatsSection from '../Components/Dashboard/Stats/StatsSection'
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+
+    <DashboardLayout>
+      <StatsSection />
+    </DashboardLayout>
   )
 }
 

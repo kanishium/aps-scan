@@ -1,8 +1,14 @@
 import React from 'react'
+import DashboardLayout from '../Components/Dashboard/Layout/DashboardLayout'
 
 const ScanDets = () => {
   return (
-    <div>ScanDets</div>
+
+    <DashboardLayout>
+      <h1 className="text-2xl font-semibold">
+        Scan Detail Page — Scan ID:
+      </h1>
+    </DashboardLayout>
   )
 }
 
