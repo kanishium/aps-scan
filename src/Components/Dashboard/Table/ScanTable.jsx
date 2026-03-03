@@ -2,13 +2,29 @@ import React from 'react'
 import TableRow from './TableRow'
 import {scans} from '../../../Data/scan'
 import ScanToolbar from '../ToolBar.jsx/ScanToolBar'
+import { useState } from "react";
 const ScanTable = () => {
+  const [statusFilter, setStatusFilter] = useState("All");
+  const [query, setQuery] = useState("");
+
+
+  const filteredScans = scans.filter((scan) => {
+  const matchesSearch =
+    scan.name.toLowerCase().includes(query.toLowerCase()) ||
+    scan.type.toLowerCase().includes(query.toLowerCase());
+
+  const matchesStatus =
+    statusFilter === "All" || scan.status === statusFilter;
+
+  return matchesSearch && matchesStatus;
+});
+
   return (
-    <div className="bg-white m-2 p-2 rounded-xl overflow-hidden">
-      <ScanToolbar/>
+    <div className="bg-white m-2 p-2 rounded-xl overflow-hidden dark:bg-[#161A21]">
+      <ScanToolbar setQuery={setQuery}  setStatusFilter={setStatusFilter}/>
 
       <table className="w-full text-xs">
-        <thead className=" text-gray-500 border-b border-gray-400">
+        <thead className=" text-gray-500 border-b border-gray-400 dark:text-[#9E9E9E]">
           <tr>
             <th className="text-left py-4">Scan Name</th>
             <th className="text-left">Type</th>
@@ -20,7 +36,7 @@ const ScanTable = () => {
         </thead>
 
         <tbody>
-          {scans.map((scan) => (
+          {filteredScans.map((scan) => (
             <TableRow key={scan.id} scan={scan} />
           ))}
         </tbody>

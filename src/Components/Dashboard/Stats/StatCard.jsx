@@ -12,7 +12,7 @@ const StatCard = ({
   const isDecrease = change.includes("decrease");
 
   return (
-    <div className="bg-white px-7 py-6 flex flex-col ">
+    <div className="bg-white px-7 py-6 flex flex-col dark:bg-[#161A21] ">
 
       {/* HEADER */}
       <div className="flex items-center justify-between">
@@ -29,7 +29,7 @@ const StatCard = ({
 
       {/* VALUE + TREND */}
       <div className="flex items-end gap-3">
-        <h3 className="text-xl font-semibold text-gray-900">
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
           {value}
         </h3>
 
