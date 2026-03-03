@@ -3,7 +3,7 @@ import { FiHome } from 'react-icons/fi'
 
 const TopNavbar = () => {
   return (
-     <header className="bg-white border-b px-6 py-2 flex items-center justify-between">
+     <header className="bg-white  px-6 py-2 flex items-center justify-between">
 
       {/* LEFT SIDE */}
       <div className="flex items-center gap-3 text-sm">
@@ -40,7 +40,6 @@ const TopNavbar = () => {
         <button className="px-4 py-2 rounded-lg text-sm font-medium border border-red-300 text-red-500 bg-red-50 hover:bg-red-100 transition">
           Stop Scan
         </button>
-
       </div>
 
     </header>

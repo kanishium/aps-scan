@@ -11,7 +11,7 @@ const DashboardLayout = ({children}) => {
       <div className="flex flex-col flex-1">
         <TopNavbar />
 
-        <main className="p-6 space-y-6">
+        <main className="py-2 space-y-2">
           {children}
         </main>
       </div>

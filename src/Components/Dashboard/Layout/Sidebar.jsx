@@ -8,12 +8,13 @@ import {
   FiSettings,
   FiHelpCircle,
 } from "react-icons/fi";
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const topMenu = [
-  { name: "Dashboard", icon: FiGrid, active: true },
-  { name: "Projects", icon: FiFolder },
-  { name: "Scans", icon: FiBarChart2 },
-  { name: "Schedule", icon: FiCalendar },
+  { name: "Dashboard", icon: FiGrid, path: "/dashboard" },
+  { name: "Projects", icon: FiFolder, path: "/projects" },
+  { name: "Scans", icon: FiBarChart2, path: "/scan" },
+  { name: "Schedule", icon: FiCalendar, path: "/schedule" },
 ];
 
 const bottomMenu = [
@@ -22,9 +23,12 @@ const bottomMenu = [
   { name: "Support", icon: FiHelpCircle },
 ];
 const Sidebar = () => {
-    return (
 
-    <aside className="w-64 bg-[#F7F9FB] border-r flex flex-col justify-between min-h-screen py-6">
+   const navigate = useNavigate();
+  const location = useLocation();
+  return (
+
+    <aside className="w-64 bg-white  flex flex-col justify-between min-h-screen py-6">
 
       {/* TOP AREA */}
       <div>
@@ -41,18 +45,20 @@ const Sidebar = () => {
           {topMenu.map((item) => {
             const Icon = item.icon;
 
+            const isActive = location.pathname.startsWith(item.path);
+
             return (
               <div
                 key={item.name}
+                onClick={() => navigate(item.path)}
                 className={`flex mx-6 items-center gap-3 p-3 rounded-full cursor-pointer transition
-                ${
-                  item.active
+        ${isActive
                     ? "bg-[#DBF0F0] text-[#0E9E9E]"
                     : "text-gray-600 hover:bg-gray-100"
-                }`}
+                  }`}
               >
-                <Icon className='' size={18} />
-                <span className="text-sm  font-bold">{item.name}</span>
+                <Icon size={18} />
+                <span className="text-sm font-bold">{item.name}</span>
               </div>
             );
           })}
@@ -65,12 +71,12 @@ const Sidebar = () => {
         <nav className="space-y-2">
           {bottomMenu.map((item) => {
             const Icon = item.icon;
-
+            
             return (
               <div
                 key={item.name}
                 className="flex items-center gap-3 mx-6 p-3 rounded-full text-gray-600 hover:bg-gray-100 cursor-pointer transition"
-              >
+                >
                 <Icon size={18} />
                 <span className="text-sm font-bold">{item.name}</span>
               </div>
@@ -78,9 +84,9 @@ const Sidebar = () => {
           })}
         </nav>
       </div>
-
+      
       {/* USER PROFILE */}
-      <div className="flex items-center gap-3">
+      <div className="flex border-t-1 border-gray-400 pt-3 px-6 items-center gap-3">
         <img
           src="https://i.pravatar.cc/40"
           alt="user"
@@ -95,7 +101,7 @@ const Sidebar = () => {
 
     </aside>
 
-    )
+  )
 }
 
 export default Sidebar

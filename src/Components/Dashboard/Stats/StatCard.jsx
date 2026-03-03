@@ -1,17 +1,52 @@
-import React from 'react'
+import { FiTrendingUp, FiTrendingDown } from "react-icons/fi";
 
-const StatCard = ({ title, value, change, color }) => {
+const StatCard = ({
+  title,
+  value,
+  change,
+  trendColor,
+  icon: Icon,
+  iconBg,
+  iconColor,
+}) => {
+  const isDecrease = change.includes("decrease");
+
   return (
-    <div className="bg-white rounded-xl p-5 shadow-sm border">
-      <p className="text-sm text-gray-500">{title}</p>
+    <div className="bg-white px-7 py-6 flex flex-col ">
 
-      <h3 className="text-2xl font-semibold mt-2">{value}</h3>
+      {/* HEADER */}
+      <div className="flex items-center justify-between">
+        <p className="text-sm font-medium text-[#9E9E9E]">
+          {title}
+        </p>
 
-      <p className={`text-xs mt-1 ${color}`}>
-        {change}
-      </p>
+        <div
+          className={`w-9 h-9 rounded-lg flex items-center justify-center ${iconBg}`}
+        >
+          <Icon className={`${iconColor}`}  size={17} />
+        </div>
+      </div>
+
+      {/* VALUE + TREND */}
+      <div className="flex items-end gap-3">
+        <h3 className="text-xl font-semibold text-gray-900">
+          {value}
+        </h3>
+
+        <div
+          className={`flex items-center gap-1 text-[10px] font-medium ${trendColor}`}
+        >
+          {isDecrease ? (
+            <FiTrendingDown size={10} />
+          ) : (
+            <FiTrendingUp size={10} />
+          )}
+
+          <span>{change}</span>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default StatCard
+export default StatCard;
