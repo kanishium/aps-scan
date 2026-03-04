@@ -20,7 +20,7 @@ const ScanTable = () => {
 });
 
   return (
-    <div className="bg-white m-2 p-2 rounded-xl overflow-hidden dark:bg-[#161A21]">
+    <div className="w-screen sm:w-auto overflow-scroll sm:overflow-visible bg-white m-2 p-2 rounded-xl overflow-hidden dark:bg-[#161A21]">
       <ScanToolbar setQuery={setQuery}  setStatusFilter={setStatusFilter}/>
 
       <table className="w-full text-xs">

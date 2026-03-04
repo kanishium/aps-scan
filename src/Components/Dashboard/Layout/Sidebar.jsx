@@ -37,6 +37,7 @@ const Sidebar = () => {
     flex flex-col justify-between
     min-h-screen py-6
     transition-colors
+    hidden sm:inline
   "
     >
 

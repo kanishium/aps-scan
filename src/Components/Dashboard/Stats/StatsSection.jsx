@@ -4,7 +4,7 @@ import StatCard from './StatCard'
 
 const StatsSection = () => {
   return (
-    <div className="flex ">
+    <div className=" sm:flex ">
       {dashboardStats.map((stat, i) => (
         <StatCard key={i} {...stat} />
       ))}

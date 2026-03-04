@@ -2,13 +2,15 @@ import React, { useContext } from 'react'
 import toast from 'react-hot-toast';
 import { FiHome, FiMoon, FiSun } from 'react-icons/fi'
 import { ThemeContext } from '../../../Context/ThemeContext';
+import { FcMenu } from 'react-icons/fc';
 const TopNavbar = () => {
   const { dark, toggleTheme } = useContext(ThemeContext);
   return (
-    <header className="bg-white dark:bg-[#0A0F13] text-gray-800 dark:text-white px-6 py-2 flex items-center justify-between border-b dark:border-gray-800 transition-colors">
+    <header className="bg-white dark:bg-[#0A0F13] text-gray-800 dark:text-white sm:px-6 sm:py-2 flex sm:items-center sm:justify-between border-b dark:border-gray-800 transition-colors">
 
       {/* LEFT SIDE */}
       <div className="flex items-center gap-3 text-sm">
+      <FcMenu className='sm:hidden'  />
 
         {/* Page Title */}
         <h2 className="font-semibold  text-gray-800 text-base dark:text-white">
@@ -16,7 +18,7 @@ const TopNavbar = () => {
         </h2>
 
         {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-gray-400">
+        <div className="flex items-center gap-1 sm:gap-2 text-sm text-gray-400">
 
           <FiHome size={14} />
 
@@ -33,7 +35,7 @@ const TopNavbar = () => {
       </div>
 
       {/* RIGHT ACTION BUTTONS */}
-      <div className="flex items-center gap-3">
+      <div className="grid grid-cols-1 ml-4 sm:flex items-center gap-3">
 
         <button
           onClick={() => toast("Exporting report...")}
