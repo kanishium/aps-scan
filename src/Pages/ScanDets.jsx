@@ -15,8 +15,8 @@ const ScanDets = () => {
       <div className=" space-y-1">
 
         {/* TOP SECTION */}
-        <div className=" flex items-center justify-center ">
-          <div className="flex gap-4 items-center py-8">
+        <div className=" sm:flex items-center justify-center ">
+          <div className="flex sm:w-auto w-screen gap-4 sm:justify-baseline justify-center items-center py-8">
             <ScanProgress />
           </div>
 
@@ -27,14 +27,12 @@ const ScanDets = () => {
         </div>
 
         {/* LOWER SECTION */}
-        <div className="grid grid-cols-3">
+        <div className="flex flex-col sm:grid grid-cols-3">
 
-          {/* LEFT CONSOLE */}
-          <div className="col-span-2">
+          <div className=" sm:col-span-2">
             <LiveConsole />
           </div>
 
-          {/* RIGHT FINDINGS */}
           <FindingList />
 
         </div>

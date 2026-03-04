@@ -34,14 +34,13 @@ const Sidebar = () => {
     w-64
     bg-white dark:bg-[#0A0F13]
     border-r border-gray-200 dark:border-gray-700
-    flex flex-col justify-between
+    hidden
+    sm:flex flex-col justify-between
     min-h-screen py-6
     transition-colors
-    hidden sm:inline
   "
     >
 
-      {/* TOP AREA */}
       <div>
         {/* Logo */}
         <div className="flex items-center gap-3 px-6 mb-10">
@@ -75,7 +74,6 @@ ${isActive
           })}
         </nav>
 
-        {/* Divider */}
         <div className="w-full border-t border-gray-200 dark:border-gray-700 my-8"></div>
 
         {/* BOTTOM MENU */}
@@ -86,11 +84,11 @@ ${isActive
             return (
               <div
                 key={item.name}
-                className="
-flex items-center gap-3 mx-6 p-3 rounded-full
-text-gray-600 
-hover:bg-gray-100 dark:hover:bg-gray-800
+                className=" flex items-center gap-3 mx-6 p-3 rounded-full text-gray-600 
 cursor-pointer transition dark:text-[#64748A]
+hover:bg-gray-100 dark:hover:bg-gray-800
+
+
 "
               >
                 <Icon size={18} />
@@ -100,8 +98,7 @@ cursor-pointer transition dark:text-[#64748A]
           })}
         </nav>
       </div>
-
-      {/* USER PROFILE */}
+      
       <div className="flex border-t border-gray-200 dark:border-gray-700 pt-3 px-6 items-center gap-3">
         <img
           src="https://i.pravatar.cc/40"

@@ -27,7 +27,6 @@ const TableRow = ({ scan }) => {
                 <ProgressBar value={scan.progress} />
             </td>
 
-            {/* Vulnerability badges */}
             <td>
                 <div className="flex gap-2">
 

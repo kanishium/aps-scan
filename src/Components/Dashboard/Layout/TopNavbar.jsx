@@ -12,12 +12,10 @@ const TopNavbar = () => {
       <div className="flex items-center gap-3 text-sm">
       <FcMenu className='sm:hidden'  />
 
-        {/* Page Title */}
         <h2 className="font-semibold  text-gray-800 text-base dark:text-white">
           Scan
         </h2>
 
-        {/* Breadcrumb */}
         <div className="flex items-center gap-1 sm:gap-2 text-sm text-gray-400">
 
           <FiHome size={14} />
@@ -39,7 +37,7 @@ const TopNavbar = () => {
 
         <button
           onClick={() => toast("Exporting report...")}
-          className="border px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-50 transition"
+          className="border px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-50 hover:text-gray-700 transition"
         >
           Export Report
         </button>

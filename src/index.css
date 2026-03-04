@@ -1,11 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  /* This tells Tailwind v4 to use the .dark class on the html tag */
   --font-sans: "Inter", sans-serif;
 }
 
-/* This MUST be outside the @theme block in v4 */
 @variant dark (&:where(.dark, .dark *));
 
 .hide-scrollbar::-webkit-scrollbar {
@@ -15,4 +13,13 @@
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+html, body {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;     
+}
+
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+  display: none;             
 }

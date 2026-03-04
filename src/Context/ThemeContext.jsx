@@ -14,7 +14,7 @@ export const ThemeProvider = ({ children }) => {
   }, []);
 
 useEffect(() => {
-  console.log("Dark mode is now:", dark); // Check your browser console
+  console.log("Dark mode is now:", dark); 
   if (dark) {
     document.documentElement.classList.add("dark");
     localStorage.setItem("theme", "dark");

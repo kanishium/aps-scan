@@ -42,7 +42,6 @@ const ProjectInfoBar = () => {
         </p>
       </div>
 
-      {/* RIGHT REFRESH */}
       <div className="flex items-center gap-2 text-gray-400 text-sm dark:text-white">
         <FiRefreshCw className="text-[#0E9E9E] font-extrabold" />
         <span>10 mins ago</span>

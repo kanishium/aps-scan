@@ -30,8 +30,6 @@ const LiveConsole = () => {
         activeTab={activeTab}
         setActiveTab={setActiveTab}
       />
-
-      {/* LOG AREA */}
       <div className="px-6 py-5 h-[420px] dark:bg-[#0A0F13] overflow-y-auto space-y-4 bg-[#FAFBFC]">
 
         {activeTab === "Activity Log" ? (

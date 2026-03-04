@@ -14,7 +14,6 @@ const StatCard = ({
   return (
     <div className="bg-white mb-5 sm:mb-0 px-25 sm:px-7 py-6 flex flex-col dark:bg-[#161A21] ">
 
-      {/* HEADER */}
       <div className="flex items-center gap-5 sm:justify-between">
         <p className="text-sm font-medium text-[#9E9E9E]">
           {title}

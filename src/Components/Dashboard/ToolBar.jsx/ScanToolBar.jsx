@@ -20,7 +20,6 @@ const ScanToolbar = ({ setQuery, setStatusFilter }) => {
 
 
 
-      {/* ACTION BUTTONS */}
       <div className="mt-3 sm:mt-0 flex sm:gap-1 gap-3">
 
         <div className="relative">

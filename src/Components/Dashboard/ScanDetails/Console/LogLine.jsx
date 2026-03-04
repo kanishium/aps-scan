@@ -12,12 +12,10 @@ const LogLine = ({ log }) => {
   return (
     <div className="flex gap-3 text-[13px] font-mono leading-6 dark:bg-[#0A0F13]">
 
-      {/* timestamp */}
       <span className="text-gray-400 whitespace-nowrap">
         [{log.time}]
       </span>
 
-      {/* message */}
       <p className="text-gray-700">
         {log.parts.map((part, i) => (
           <span

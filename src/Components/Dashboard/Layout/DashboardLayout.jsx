@@ -4,7 +4,7 @@ import TopNavbar from './TopNavbar'
 
 const DashboardLayout = ({children}) => {
   return (
-    <div className="flex overflow-hidden sm:min-h-screen bg-gray-100 dark:bg-[#0A0F13]">
+    <div className="flex overflow-hidden sm:overflow-visible sm:min-h-screen bg-gray-100 dark:bg-[#0A0F13]">
 
       <Sidebar />
 

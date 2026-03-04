@@ -3,7 +3,7 @@ import React from 'react'
 
 const ConsoleTabs = ({ activeTab, setActiveTab }) => {
   return (
-    <div className="flex gap-8 px-6 py-2 border-b border-gray-400 dark:bg-[#0A0F13]">
+    <div className=" flex gap-8 px-6 py-2 border-b border-gray-400 dark:bg-[#0A0F13]">
 
       {["Activity Log", "Verification Loops"].map((tab) => (
         <button
