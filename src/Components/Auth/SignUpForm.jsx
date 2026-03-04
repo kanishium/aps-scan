@@ -22,7 +22,7 @@ const handleMetaLogin = () => {
 
     const [showPassword, setShowPassword] = useState(false);
     return (
-        <div className=" max-w-md bg-white rounded-2xl shadow-2xl p-8">
+        <div className="m-5 sm:m-0 max-w-md bg-white rounded-2xl shadow-2xl p-8">
 
             {/* Title */}
             <h2 className="text-3xl font-semibold text-center text-gray-800">

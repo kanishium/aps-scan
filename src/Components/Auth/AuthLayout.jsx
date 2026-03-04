@@ -8,12 +8,12 @@ const AuthLayout = ({ children }) => {
                 <div className="w-5 h-5 rounded-full bg-teal-400 flex items-center justify-center">
                     <div className='w-3 h-3 rounded-full bg-white'></div>
                 </div>
-                <span className="text-lg text-white font-semibold tracking-wide">aps</span>
+                <span className="text-3xl sm:text-lg text-white font-semibold tracking-wide ">aps</span>
             </div>
-            <div className="auth-container px-15  flex justify-between items-center">
+            <div className="auth-container sm:px-15   sm:flex justify-between items-center ">
 
 
-                <div className="auth-left py-10">
+                <div className="auth-left sm:py-10">
                     <div className="auth-left min-h-[80vh] text-white flex flex-col justify-between p-12">
 
                         {/* Main Content */}
@@ -49,7 +49,7 @@ const AuthLayout = ({ children }) => {
                         </div>
 
                         {/* Trustpilot Section */}
-                        <div>
+                        <div className=''>
                             <p className="text-white-400 flex gap-1 text-sm font-medium">
                                 <FaStar className='text-amber-300'/>
                                  Trustpilot</p>
